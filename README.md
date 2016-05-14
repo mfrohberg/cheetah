@@ -22,8 +22,9 @@ Clone this repo locally, and make sure all your team members have access to it.
 
 * `npm install`
 
-* `npm start` will start the server locally to test that everything is running correctly
+* `npm start` will start the development server and serve js from memory
 
+* `npm run build` will create a the dist bundle for production
 
 ### Step 2) Deploy Your App
 
@@ -31,7 +32,7 @@ While you can't make any checkins before the comp, what you **can** do right now
 
 * `npm install -g surge`
 
-* `surge .`
+* `surge dist`
 
 Note: please do not remove the `CNAME` file, as that tells it where to deploy to.
 

@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "A webpack starter for angular 2",
   "scripts": {
-    "start": "webpack-dev-server --inline --progress --port 8080",
+    "start": "webpack-dev-server --inline --progress --port 9000",
     "test": "karma start",
     "build": "rm -rf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
+    "postbuild": "cp CNAME dist/",
+    "deploy": "npm run build && surge dist",
     "postinstall": "typings install"
   },
   "license": "MIT",
@@ -38,6 +40,7 @@
     "phantomjs-prebuilt": "^2.1.7",
     "raw-loader": "^0.5.1",
     "style-loader": "^0.13.1",
+    "surge": "^0.18.0",
     "ts-loader": "^0.8.1",
     "typescript": "^1.8.9",
     "typings": "^0.7.12",
