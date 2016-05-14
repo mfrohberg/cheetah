@@ -1,4 +1,11 @@
 <main>
-  <h1>Hello from the Aristocrats</h1>
-
+  <h1>Cheetah</h1>
+  <div *ngIf="auth | async">You are logged in as {{username}}
+    <button (click)="findProjects()">Find Projects</button>
+    <button (click)="logout()">Logout</button>
+  </div>
+  <div *ngIf="!(auth | async)">
+    <h2>Please log in</h2>
+    <button (click)="login()">Login with Github</button>
+  </div>
 </main>
