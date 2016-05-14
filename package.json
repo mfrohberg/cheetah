@@ -7,7 +7,7 @@
     "test": "karma start",
     "build": "rm -rf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
     "postbuild": "cp CNAME dist/",
-    "deploy": "npm run build && surge dist",
+    "deploy": "surge dist",
     "postinstall": "typings install"
   },
   "license": "MIT",
