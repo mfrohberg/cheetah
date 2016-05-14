@@ -7,3 +7,4 @@ import '@angular/http';
 import '@angular/router-deprecated';
 // RxJS
 import 'rxjs';
+import 'github-api'
